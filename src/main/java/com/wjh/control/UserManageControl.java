@@ -62,4 +62,9 @@ public class UserManageControl {
         service.updateByPrimaryKey(user1);
         return new ResponseEntity<User>(user1,HttpStatus.OK);
     }
+    @RequestMapping("/index")
+    public String getIndexPage(){
+
+        return "UserManagement";
+    }
 }
