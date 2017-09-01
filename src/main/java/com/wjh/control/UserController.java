@@ -30,6 +30,7 @@ public class UserController {
 			article.setContent("content" + i);
 			articles.add(article);
 		}
+		System.out.println(articles);
 		map.addAttribute("articles",articles);
 		return "views";
 	}

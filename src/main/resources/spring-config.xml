@@ -22,22 +22,23 @@
         <property name="password" value="123456"></property>
     </bean>
 
-    <!--&lt;!&ndash;配置sessionFactory&ndash;&gt;-->
-    <!--<bean id="sqlsessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-        <!--&lt;!&ndash;指定mybatis的核心配置文件&ndash;&gt;-->
-        <!--&lt;!&ndash;<property name="configLocation" value="classpath:mybatis-config.xml"/>&ndash;&gt;-->
-    <!--</bean>-->
-    <!--&lt;!&ndash;   扫描mybatis对应的映射文件&ndash;&gt;-->
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-        <!--<property name="basePackage" value="com.wjh.mapper"/>-->
-    <!--</bean>-->
+    <!--配置sessionFactory-->
+    <bean id="sqlsessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
 
-    <!--&lt;!&ndash; 配置事务&ndash;&gt;-->
-    <!--<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
-    <!--&lt;!&ndash;开启事务的注解&ndash;&gt;-->
-    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+        <!--指定mybatis的核心配置文件-->
+        <!--<property name="configLocation" value="classpath:mybatis-config.xml"/>-->
+    </bean>
+    <!--   扫描mybatis对应的映射文件-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.wjh.mapper"/>
+    </bean>
+
+    <!-- 配置事务-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--开启事务的注解-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
 </beans>

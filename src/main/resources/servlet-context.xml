@@ -47,6 +47,7 @@
 	</bean>
 	<!-- Excel视图 -->
 	<bean class="com.wjh.view.ExcelView" id="excelView" /><!-- 注册自定义视图 -->
+
 	<bean class="org.springframework.web.servlet.view.xml.MarshallingView"
 		id="myXmlView">
 		<property name="modelKey" value="articles" />

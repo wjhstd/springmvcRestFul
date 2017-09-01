@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--设置别名-->
+
+    <!--<properties resource="jdbc.properties"/>-->
+    <!--<settings>-->
+        <!--&lt;!&ndash; Globally enables or disables any caches configured in any mapper under this configuration &ndash;&gt;-->
+        <!--&lt;!&ndash;是否使用二级缓存&ndash;&gt;-->
+        <!--<setting name="cacheEnabled" value="true"/>-->
+        <!--&lt;!&ndash; Sets the number of seconds the driver will wait for a response from the database &ndash;&gt;-->
+        <!--<setting name="defaultStatementTimeout" value="3000"/>-->
+        <!--&lt;!&ndash; Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn &ndash;&gt;-->
+        <!--<setting name="mapUnderscoreToCamelCase" value="true"/>-->
+        <!--&lt;!&ndash; Allows JDBC support for generated keys. A compatible driver is required.-->
+        <!--This setting forces generated keys to be used if set to true,-->
+         <!--as some drivers deny compatibility but still work &ndash;&gt;-->
+        <!--<setting name="useGeneratedKeys" value="true"/>-->
+        <!--&lt;!&ndash;延迟加载的总开关&ndash;&gt;-->
+        <!--<setting name="lazyLoadingEnabled" value="true"/>-->
+        <!--&lt;!&ndash;设置按需加载&ndash;&gt;-->
+        <!--<setting name="aggressiveLazyLoading" value="false"/>-->
+        <!--&lt;!&ndash;打印sql&ndash;&gt;-->
+        <!--<setting name="logImpl" value="LOG4J2"/>-->
+
+
+    <!--</settings>-->
+<!--&lt;!&ndash;批量的别名定义 自动扫描包下的pojo 定义对应的别名,默认是类名 ≈&ndash;&gt;-->
+    <!--<typeAliases>-->
+        <!--<typeAlias alias="User" type="com.wjh.bean.User"/>-->
+        <!--<typeAlias alias="Order" type="com.wjh.bean.Order"/>-->
+        <!--<package name="com.wjh.bean"/>-->
+    <!--</typeAliases>-->
+
+    <!--&lt;!&ndash; Continue going here &ndash;&gt;-->
+    <!--<environments default="default">-->
+        <!--<environment id="default">-->
+            <!--&lt;!&ndash;使用jdbc的事务管理,现在由mybatis管理,整合Spring之后由Spring管理&ndash;&gt;-->
+            <!--<transactionManager type="jdbc"></transactionManager>-->
+            <!--<dataSource type="POOLED">-->
+                <!--<property name="driver" value="${drivername}"/>-->
+                <!--<property name="url" value="${url}"/>-->
+                <!--<property name="username" value="${username}"/>-->
+                <!--<property name="password" value="${password}"/>-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+    <!--</environments>-->
+    <!--<mappers>-->
+
+        <!--&lt;!&ndash;<mapper resource="UserMaper.xml"></mapper>&ndash;&gt;-->
+        <!--<package name="com.wjh.mapper"/>-->
+    <!--</mappers>-->
+</configuration>
