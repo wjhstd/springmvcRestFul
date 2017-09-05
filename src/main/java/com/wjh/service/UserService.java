@@ -44,7 +44,7 @@ public class UserService {
     }
 
    public List<User> selectAll(){
-        List<User> users=mapper.selectAll();
+        List<User> users=mapper.selectall();
         return users;
     }
 }
